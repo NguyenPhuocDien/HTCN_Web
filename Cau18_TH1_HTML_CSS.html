@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Tin Tức</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #2c5282;
+            --bg-color: #f9fafb;
+            --text-color: #2d3748;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .header {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(74, 144, 226, 0.1);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover .news-image {
+            transform: scale(1.05);
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .news-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .news-excerpt {
+            color: #4a5568;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1.25rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .read-more i {
+            margin-left: 0.5rem;
+        }
+
+        .read-more:hover {
+            background: var(--secondary-color);
+            transform: translateX(4px);
+        }
+
+        .load-more {
+            display: block;
+            margin: 2rem auto;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .load-more:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .news-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .news-image {
+                height: 180px;
+            }
+            .news-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .news-image {
+                height: 150px;
+            }
+            .news-title {
+                font-size: 1.2rem;
+            }
+            .read-more {
+                padding: 0.4rem 1rem;
+                font-size: 0.9rem;
+            }
+            .load-more {
+                font-size: 0.9rem;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Trang Tin Tức</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="news-grid">
+            <article class="news-card">
+                <img src="https://picsum.photos/600/400" alt="Tin tức 1" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">SpaceX đạt cột mốc mới trong khám phá vũ trụ</h2>
+                    <p class="news-excerpt">SpaceX vừa hoàn thành một chuyến bay thử nghiệm thành công, mở ra cơ hội mới cho các sứ mệnh không gian trong tương lai...</p>
+                    <a href="#" class="read-more">Đọc tiếp <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <img src="https://picsum.photos/601/400" alt="Tin tức 2" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Công nghệ AI thay đổi ngành y tế</h2>
+                    <p class="news-excerpt">Ứng dụng trí tuệ nhân tạo đang giúp các bác sĩ chẩn đoán bệnh chính xác hơn, tiết kiệm thời gian và chi phí...</p>
+                    <a href="#" class="read-more">Đọc tiếp <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <img src="https://picsum.photos/602/400" alt="Tin tức 3" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Năng lượng tái tạo: Tương lai bền vững</h2>
+                    <p class="news-excerpt">Các dự án năng lượng mặt trời và gió đang được mở rộng, hứa hẹn giảm thiểu tác động môi trường trong thập kỷ tới...</p>
+                    <a href="#" class="read-more">Đọc tiếp <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+        <button class="load-more">Xem thêm tin tức</button>
+    </div>
+</body>
+</html>

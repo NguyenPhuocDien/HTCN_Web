@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du Lịch Phú Quốc - Thiên Đường Biển Đảo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f6f9fc;
+            color: #2c3e50;
+        }
+
+        .header {
+            background: linear-gradient(135deg, rgba(0,105,148,0.7), rgba(0,0,0,0.6)), 
+                        url('https://storage.googleapis.com/blogvxr-uploads/2025/04/6c943a0c-dao-phu-quoc-kien-giang-6284801.webp');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.3));
+        }
+
+        .header-content {
+            max-width: 800px;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4em;
+            font-weight: 900;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+        }
+
+        .header p {
+            font-size: 1.3em;
+            margin: 15px 0;
+            font-weight: 400;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(255,107,107,0.4);
+            border-color: #fff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: #006994;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: #ff6b6b;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .about-content i {
+            font-size: 2em;
+            color: #006994;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            .header p {
+                font-size: 1.1em;
+            }
+            .container {
+                padding: 15px;
+            }
+            .gallery-item img {
+                height: 200px;
+            }
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Khám Phá Phú Quốc</h1>
+            <p>Thiên đường biển đảo với những bãi biển cát trắng mịn, nước trong xanh và văn hóa độc đáo</p>
+            <a href="#about" class="cta-button">Tìm hiểu thêm</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card" id="about">
+            <h2>Về Phú Quốc</h2>
+            <div class="about-content">
+                <i class="fas fa-umbrella-beach"></i>
+                <p>Phú Quốc, viên ngọc quý của Việt Nam, nằm trong vịnh Thái Lan. Với những bãi biển tuyệt đẹp như Bãi Sao, ẩm thực đặc sắc với hải sản tươi ngon, và các khu nghỉ dưỡng 5 sao, Phú Quốc là điểm đến lý tưởng cho mọi du khách.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Thư Viện Ảnh</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://asahitravelvietnam.com/wp-content/uploads/2020/02/phu-quoc-1-1024x683.jpg" alt="Bãi biển">
+                    <div class="gallery-caption">
+                        <h4>Bãi Sao</h4>
+                        <p>Bãi biển cát trắng đẹp nhất Phú Quốc</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://khachsanvietnam.com.vn/vnt_upload/news/01_2022/Crowne_Plaza_Phu_Quoc_Starbay_15.jpg" alt="Resort">
+                    <div class="gallery-caption">
+                        <h4>Resort Cao Cấp</h4>
+                        <p>Trải nghiệm nghỉ dưỡng 5 sao</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/1278186562-1676618550039.jpg" alt="Hoàng hôn">
+                    <div class="gallery-caption">
+                        <h4>Hoàng Hôn</h4>
+                        <p>Cảnh hoàng hôn tuyệt đẹp tại Bãi Dài</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://sayhi.vn/wp-content/uploads/2020/03/dai-dien-1.png" alt="Hải sản">
+                    <div class="gallery-caption">
+                        <h4>Hải Sản Tươi Sống</h4>
+                        <p>Đặc sản không thể bỏ qua</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://honthom.sunworld.vn/wp-content/uploads/2018/04/Anh-bia-2.jpg" alt="Cáp treo">
+                    <div class="gallery-caption">
+                        <h4>Cáp Treo Hòn Thơm</h4>
+                        <p>Cáp treo vượt biển dài nhất thế giới</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/10_2024/dia_trung_hai_phu_quoc_princessindream__min.jpg" alt="Cáp treo">
+                    <div class="gallery-caption">
+                        <h4>Địa điểm check In</h4>
+                        <p>Các địa điểm Check In nổi tiếng tại Phú Quốc</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Bản Đồ Du Lịch</h2>
+            <iframe class="map-container"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250664.6449444693!2d103.85150355!3d10.2289372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a78c62b49eda17%3A0x8aa79fbbdd72cdb!2zUGjDuiBRdeG7kWM!5e0!3m2!1svi!2s!4v1654567890123!5m2!1svi!2s"
+                    allowfullscreen=""
+                    loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</body>
+</html>

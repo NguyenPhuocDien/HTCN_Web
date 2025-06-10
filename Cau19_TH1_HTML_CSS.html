@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Sự Kiện Sắp Tới</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a237e;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #1a237e;
+            color: white;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        tr:hover {
+            background-color: #e8eaf6;
+            transform: scale(1.01);
+            transition: all 0.2s ease;
+        }
+        .date {
+            width: 120px;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        .time {
+            width: 100px;
+            color: #1976d2;
+        }
+        td {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .event-name {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+        .location {
+            color: #546e7a;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            th, td {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lịch Sự Kiện Sắp Tới</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Ngày</th>
+                    <th>Giờ</th>
+                    <th>Sự Kiện</th>
+                    <th>Địa Điểm</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="date">10/06/2025</td>
+                    <td class="time">09:00</td>
+                    <td class="event-name">Hội thảo Công nghệ Web</td>
+                    <td class="location">Hội trường A</td>
+                </tr>
+                <tr>
+                    <td class="date">15/06/2025</td>
+                    <td class="time">14:30</td>
+                    <td class="event-name">Workshop UI/UX Design</td>
+                    <td class="location">Phòng họp 305</td>
+                </tr>
+                <tr>
+                    <td class="date">20/06/2025</td>
+                    <td class="time">08:00</td>
+                    <td class="event-name">Triển lãm Công nghệ</td>
+                    <td class="location">Trung tâm Hội nghị</td>
+                </tr>
+                <tr>
+                    <td class="date">25/06/2025</td>
+                    <td class="time">15:00</td>
+                    <td class="event-name">Seminar Digital Marketing</td>
+                    <td class="location">Hội trường B</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
