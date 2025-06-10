@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đặt Bàn Quán Ăn</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .reservation-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            color: #d35400;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #d35400;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #a04000;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #d35400;
+            box-shadow: 0 0 5px rgba(211, 84, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="reservation-form">
+        <h1>Đặt Bàn Quán Ăn</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="people">Số người:</label>
+                <select id="people" name="people" required>
+                    <option value="">Chọn số người</option>
+                    <option value="1-2">1-2 người</option>
+                    <option value="3-4">3-4 người</option>
+                    <option value="5-6">5-6 người</option>
+                    <option value="7+">7 người trở lên</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Ngày:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Giờ:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="special-requests">Yêu cầu đặc biệt:</label>
+                <textarea id="special-requests" name="special-requests" 
+                    placeholder="Vị trí bàn, món ăn đặc biệt ..."></textarea>
+            </div>
+
+            <button type="submit">Đặt Bàn</button>
+        </form>
+    </div>
+</body>
+</html>
