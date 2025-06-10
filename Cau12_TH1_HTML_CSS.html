@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Khảo Sát Ý Kiến</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+            color: #333;
+        }
+        .survey-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .survey-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+        .question-group {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .question-group h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .option-group {
+            margin: 10px 0;
+        }
+        .option-label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: vertical;
+            min-height: 100px;
+            font-family: inherit;
+        }
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+            font-size: 16px;
+        }
+        .submit-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto 0;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background: #219653;
+        }
+    </style>
+</head>
+<body>
+    <div class="survey-container">
+        <h1 class="survey-title">Khảo Sát Ý Kiến Người Dùng</h1>
+        <form>
+            <div class="question-group">
+                <h3>1. Bạn có hài lòng với dịch vụ của chúng tôi?</h3>
+                <div class="option-group">
+                    <label class="option-label">
+                        <input type="radio" name="satisfaction" value="very-satisfied"> Rất hài lòng
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="satisfaction" value="satisfied"> Hài lòng
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="satisfaction" value="neutral"> Bình thường
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="satisfaction" value="dissatisfied"> Không hài lòng
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h3>2. Bạn biết đến chúng tôi qua kênh nào? (Có thể chọn nhiều)</h3>
+                <div class="option-group">
+                    <label class="option-label">
+                        <input type="checkbox" name="source" value="facebook"> Facebook
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="source" value="friends"> Bạn bè giới thiệu
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="source" value="google"> Google
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="source" value="other"> Khác
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h3>3. Độ tuổi của bạn?</h3>
+                <div class="option-group">
+                    <select name="age">
+                        <option value="">Chọn độ tuổi</option>
+                        <option value="under-18">Dưới 18</option>
+                        <option value="18-25">18-25</option>
+                        <option value="26-35">26-35</option>
+                        <option value="above-35">Trên 35</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <h3>4. Góp ý của bạn để chúng tôi phục vụ tốt hơn:</h3>
+                <div class="option-group">
+                    <textarea name="feedback" placeholder="Nhập góp ý của bạn..."></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Gửi Khảo Sát</button>
+        </form>
+    </div>
+</body>
+</html>
